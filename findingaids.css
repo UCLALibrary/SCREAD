@@ -1,0 +1,28 @@
+body { font-family: Verdana,Arial,Helvetica }
+td, p, th, dt, dd { font-size: 10pt }
+td.large, span.large, p.large { font-size: 12pt }
+td.small, span.small, p.small { font-size: 8pt }
+td.vsmall, span.vsmall, p.vsmall { font-size: 6pt }
+td.top { font-size: 10pt; color: #FF8000; font-weight:bold }
+td.head { font-size: 9pt }
+td.red { color: red }
+tr.head { font-size: 9pt }
+tr.white { font-size: 10pt; color: white; background: gray }
+li {  font-size: 10pt }
+h1 { font-size: 16pt }
+h1.box { font-size: 22pt; font-style: italic; font-weight: bold }
+h2 { font-size: 14pt }
+h3 { font-size: 12pt }
+h3.top { color: #FF8000 }
+h4 { font-size: 10pt }
+h5 { font-size: 8pt }
+a  { font-style: italic; color: #000000; font-size: 10pt; text-decoration:none }
+a.list  { font-style:normal; font-weight:bold; color: #000000; font-size: 10pt; text-decoration:none }
+a.go  { font-style: italic; color: #000000; font-size: 7pt; text-decoration:none }
+a.h5  { font-style: italic; color: #000000; font-size: 8pt; text-decoration:none }
+a.go2  { font-style: normal; color: green; font-size: 8pt; text-decoration:none }
+a.go3  { font-style: normal; color: green; font-size: 10pt; text-decoration:none }
+a.head  { font-style:normal; color: #000000; font-size: 9pt; text-decoration:none }
+a.title  { font-style:normal; color: white; font-size: 10pt; text-decoration:none }
+select { font-size: 10pt }
+input { border: #99CCCC 2px solid; font-size: 10pt }

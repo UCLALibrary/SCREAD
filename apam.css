@@ -1,0 +1,18 @@
+body { font-family: Helvetica; bgcolor: #ffffff }
+table, td, p, th { font-family: Arial,Verdana }
+td, p, th { font-size: 9pt }
+li {  font-size: 9pt }
+h1 { font-size: 14pt }
+h1.box { font-size: 22pt; font-family: Times New Roman; font-style: italic; font-weight: bold }
+h2 { font-size: 12pt }
+h3 { font-size: 10pt }
+h4 { font-size: 9pt }
+h5 { font-size: 7pt }
+a:link { color: gray; font-weight: bold; text-decoration: none }
+a:visited { color: gray; font-weight: bold; text-decoration: none }
+input, select { font-family: Arial,Verdana; font-size: 9pt }
+span.plus { font-size: 10pt }
+td.red { color: red }
+p.red12, ol.red12, li.red12 { color: red; font-size: 12pt }
+p.bigred { color: red; font-size: 200pt }
+

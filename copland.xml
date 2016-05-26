@@ -1,0 +1,114 @@
+<?xml version="2002" encoding="UTF-8"?>
+<!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd" [
+<!NOTATION GIF PUBLIC "+//ISBN 0-7923-9432-1::Graphic Notation//NOTATION CompuServe Graphic Interchange Format//EN" "">
+<!NOTATION JPEG PUBLIC "ISO/IEC 10918:1993//NOTATION Digital Compression and Coding of Continuous-tone Still Images (JPEG)//EN" "">
+<!ENTITY hdr-clu-music PUBLIC "-//University of California, Los Angeles::Music Library/Special Collections//TEXT (eadheader: name and address)//EN" "hdrclumu.sgm">
+<!ENTITY tp-clu-music PUBLIC "-//University of California, Los Angeles::Music Library/Special Collections//TEXT (titlepage: name and address)//EN" "tpclumu.sgm">
+<!ENTITY ucseal PUBLIC "-//University of California, Berkeley::Library//NONSGML (University of California seal)//EN" "ucseal.gif" NDATA GIF>
+]>
+<ead>
+<eadheader langencoding="iso639-2b" scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1" dateencoding="iso8601">
+<eadid countrycode="us" mainagencycode="CLU"
+ identifier="ark:/13030/arkkkkk">
+PUBLIC "-//University of California, Los Angeles::Music Library Special Collections//TEXT (US::CLU::2::Aaron Copland Collection of Motion Picture Music)//EN" "copland.xml"</eadid>
+<filedesc>
+<titlestmt>
+<titleproper>Finding Aid for the Aaron Copland Collection of Motion Picture Music, <date>ca. 1941-1949.</date></titleproper>
+<titleproper type="filing">Copland (Aaron) Collection of Motion Picture Music</titleproper>
+<author>Processed by processor.</author>
+</titlestmt>
+<publicationstmt>&hdr-clu-music;<date>&#x00A9;2004</date>
+<p>The Regents of the University of California. All rights reserved.</p>
+</publicationstmt>
+</filedesc>
+<profiledesc>
+<creation>Machine-readable finding aid created by encoder.Machine-readable finding aid derived from ColdFusion web application and SQLServer relational database. Date of source: <date>date</date></creation>
+<langusage>Finding aid written in: <language langcode="eng" scriptcode="lat">English.</language></langusage>
+<descrules>Finding aid prepared using <title render="italic" inline="true">Describing Archives: a Content Standard</title></descrules>
+</profiledesc>
+</eadheader>
+<frontmatter>
+<titlepage>
+<titleproper>Finding Aid of the Aaron Copland Collection of Motion Picture Music, <date>ca. 1941-1949.</date></titleproper>
+<num>Collection number: 2</num>
+<publisher>Music Library Special Collections
+<lb/><extptr actuate="auto" show="embed" entityref="ucseal"/>
+<lb/>University of California, Los Angeles
+<lb/>Los Angeles, CA</publisher>
+&tp-clu-music;
+<list type="deflist">
+<defitem>
+<label>Processed by:</label>
+<item>processor.</item>
+</defitem>
+<defitem>
+<label>Date Completed:</label>
+<item>date</item>
+</defitem>
+<defitem>
+<label>Encoded by:</label>
+<item>encoder.</item>
+</defitem>
+</list>
+<p>&#x00A9;2004 The Regents of the University of California. All rights reserved.</p>
+</titlepage>
+</frontmatter>
+<archdesc level="collection" langmaterial="eng">
+<did>
+<head>Descriptive Summary</head>
+<unittitle label="Title">Aaron Copland Collection of Motion Picture Music, <unitdate type="inclusive">ca. 1941-1949.</unitdate></unittitle>
+<unitid label="Collection number" repositorycode="CLU" countrycode="US">2</unitid>
+<origination label="Creator"><persname source="lcnaf">Copland, Aaron</persname></origination>
+<physdesc label="Extent"><extent>1 boxes</extent> <extent>(0.5 linear ft.)</extent></physdesc>
+<repository label="Repository">
+<corpname source="lcnaf">University of California, Los Angeles. Library. <subarea>Music Library Special Collections</subarea></corpname>
+<address>
+<addressline>Los Angeles, California 90095-1490</addressline>
+</address>
+</repository>
+<abstract label="Abstract">Collection consists of ozalid copies of conductor's scores of original music for the motion pictures "The North Star" (1943) and "The Red pony" (1949). Includes piano score for the song "No village like mine," with music by Copland, words by Ira Gershwin, based on a Russian folk tune, composer unknown.</abstract>
+<physloc label="Physical location">Stored off-site at SRLF. Advance notice is required for access to the collection. Please contact Music Library Special Collections for paging information.</physloc>
+</did>
+<admininfo>
+<head>Administrative Information</head>
+<accessrestrict>
+<head>Access</head>
+<p>aq</p>
+</accessrestrict>
+<userestrict>
+<head>Publication Rights</head>
+<p>us</p>
+</userestrict>
+<prefercite>
+<head>Preferred Citation</head>
+<p>[Identification of item], Aaron Copland Collection of Motion Picture Music, 2, Music Library Special Collections, University of California, Los Angeles.</p>
+</prefercite>
+<acqinfo>
+<head>Acquisition Information</head>
+<p>prov</p>
+</acqinfo>
+<processinfo>
+<head>Processing Information</head>
+<p>Processed by: processor, date</p>
+</processinfo>
+</admininfo>
+<bioghist>
+<head>Biography</head>
+<p>Copland was born on Nov. 14, 1900 in Brooklyn, NY; studied in Paris with Nadia Boulanger, 1921-24; returned to the US in 1924, and his first major work, Symphony with organ, premiered the following year; headed the composition dept. of the Berkshire Music Center at Tanglewood (1940-65), serving as chairman of the faculty (1957-65); made frequent international appearances as a conductor; awarded the Presidential Medal of Freedom in 1964; wrote many articles and books; compositions include Music for the theater (1925), Dance symphony (1929), El Sal=n MTxico (1936), Billy the Kid (1938), Rodeo (1942), A Lincoln portrait (1942), Appalachian spring (1944), Third symphony (1946), Music for a great city (1964), and Inscape (1967); he died on Dec. 2, 1990 in North Tarrytown, NY.</p>
+</bioghist>
+<scopecontent>
+<head>Scope and Content</head>
+<p>Collection consists of ozalid copies of conductor's scores of original music for the motion pictures "The North Star" (1943) and "The Red pony" (1949). Includes piano score for the song "No village like mine," with music by Copland, words by Ira Gershwin, based on a Russian folk tune, composer unknown.</p>
+</scopecontent>
+<dsc type="in-depth">
+<head>Container List</head>
+<c01 level="file">
+<did>
+<container type="box" label="Box ">1</container>
+<container type="folder" label="Folder ">1</container>
+<unittitle>1</unittitle>
+</did>
+</c01>
+</dsc>
+</archdesc>
+</ead>

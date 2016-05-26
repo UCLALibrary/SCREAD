@@ -1,0 +1,2 @@
+<h5>&copy <cfoutput>#dateformat(now(),"yyyy")#</cfoutput> Regents of the University of California<br>
+<a href="http://unitproj.library.ucla.edu/dlib/admin/eadstats.cfm" class="go2" target="new">stats</a></h5>

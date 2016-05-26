@@ -1,0 +1,4 @@
+	s = replace(s,"&","&#x0026;","all") ;
+	s = replace(s,"ä","&#x00E4;","all") ;
+	s = replace(s,"ü","&#x00FC;","all") ;
+	s = replace(s,"ö","&#x00F6;","all") ;
