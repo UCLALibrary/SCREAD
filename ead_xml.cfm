@@ -347,7 +347,7 @@ where
 
 <cfif session.delivertype eq "html">
 	<cfinclude template="ead_xml_disp_2.cfm">
-<cfelseif session.delivertype eq "xml_grid" or session.delivertype eq "xml_text">
+<cfelseif session.delivertype eq "xml_grid" or session.delivertype eq "xml_text" or session.delivertype eq "xml_file">
 	<cfinclude template="ead_xml_disp_nat.cfm">
 <cfelseif session.delivertype eq "email">
 	<cfinclude template="ead_xml_email.cfm">

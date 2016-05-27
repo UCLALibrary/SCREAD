@@ -466,6 +466,10 @@ WriteOutput("&lt;/add&gt;<br><br>") ;
 <!---<cffile action="write" file="#GetDirectoryFromPath(GetCurrentTemplatePath())#test.txt" output="#xmlvar#" addnewline="no">--->
 <cfif session.delivertype is "xml_text">
 	<cfoutput>#xmlvar#</cfoutput>
+<cfelseif session.delivertype is "xml_file">
+	<cfheader name="Content-Disposition" value="attachment; filename=#m_filename#">
+	<!--- Ugly hack to avoid saving temp file on CF server.  cfcontent variable requires binary content.... --->
+	<cfcontent variable="#ToBinary(ToBase64(xmlvar))#" type="text/xml" >
 <cfelseif session.delivertype is "email">
 	<cfset session.xmlvar=variables.xmlvar>
 	<cflocation url="ead_xml_email.cfm">

@@ -46,9 +46,12 @@ where collid=#url.id#
 <input type="hidden" name="codetype" value="xml">
 <tr><th align="right" valign="top"><u>Delivery</u>:</th><td valign="top">
 <p><input type="radio" name="delivertype" value="html" checked> XML displayed as HTML<br>
-<input type="radio" name="delivertype" value="xml_text"> XML, W3C Schema<!---<br>
+<input type="radio" name="delivertype" value="xml_text"> XML, W3C Schema<br>
+<input type="radio" name="delivertype" value="xml_file"> XML, W3C Schema as file
+<!---<br>
 <input type="radio" name="delivertype" value="xml_grid"> XML, grid format<br>
-<input type="radio" name="delivertype" value="email"> XML email attachment to <input type="text" name="emailto" value="<cfoutput>#session.email#</cfoutput>" size="50" maxlength="100">---></p>
+<input type="radio" name="delivertype" value="email"> XML email attachment to <input type="text" name="emailto" value="<cfoutput>#session.email#</cfoutput>" size="50" maxlength="100">--->
+</p>
 </td></tr>
 <tr><th align="right" valign="top"><u>Include</u>:</th><td valign="top">
 <p><input type="checkbox" name="head" value="1" checked> EADHeader</p>
