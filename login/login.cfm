@@ -7,8 +7,6 @@
 
 <LINK href="FindingAids.css" rel="stylesheet" type="text/css">
 
-<cfset session.dsn="EAD">
-
 <cfif not isDefined("session.loginOld")>
 	<cfset session.loginOld=0>
 </cfif>
@@ -25,7 +23,7 @@ select * from login
 	select groupCode from tblGroups where groupAbbrev='#variables.eadGroup#'
 	</cfquery>
 	<cfset session.grp=srchGroups.groupCode>
-	<cflocation url="login2.cfm">
+	<cflocation url="login2.cfm" addtoken="no">
 <cfelse>
 	<cfset session.titlepg=1>
 </cfif>

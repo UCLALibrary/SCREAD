@@ -53,4 +53,4 @@
 <cfset session.loginType=login.loginType>
 <cfset session.loggedIn=1>
 <cfinclude template="../fa_loadpreferences.cfm">
-<cflocation url="../index.cfm">
+<cflocation url="../index.cfm" addtoken="no">
