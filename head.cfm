@@ -74,7 +74,7 @@
 <a href="http://voro.cdlib.org:8086/cgi/blackhole.cgi"  target="oac" class="go2">voroEAD&nbsp;Testing</a> /
 <a href="http://voro.cdlib.org:8086/cgi/process.cgi"  target="oac" class="go2">voroEAD&nbsp;Production</a>
 </td>
-<td align="center"><a href="changePassword.cfm" class="go2">Change password</a> / <a href="logout.cfm" class="go2">Logout</a>
+<td align="center"><a href="login/changePasswordForm.cfm" class="go2">Change password</a> / <a href="logout.cfm" class="go2">Logout</a>
 </td>
 </tr>
 <!---<tr><td colspan="8" align="center" bgcolor="#FF0000"><font color="#FFFFFF"><strong>SCREAD will be unavailable between 5:00 and 5:30 PM today (Thursday April 12). Please log off during that time.</strong></font></td></tr>--->
