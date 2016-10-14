@@ -15,7 +15,12 @@
 
 	<cfif login.recordcount gt 0>
 		<cfset session.user = login.username>
-		<cflocation url="login.cfm" addtoken="no">
+		<!--- If user still has default password, prompt to change it --->
+		<cfif pwdhash is "C29E5D7B906EBF829729446D93C109CC2CE87CC2">
+			<cflocation url="changePasswordForm.cfm" addtoken="no">
+		<cfelse>
+			<cflocation url="login.cfm" addtoken="no">
+		</cfif>
 	<cfelse>
 		<cfset session.loggedIn = 0>
 	</cfif>
