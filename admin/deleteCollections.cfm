@@ -12,7 +12,7 @@ and collName='DELETE'
 </cfquery>
 
 <cfoutput query="listCollections">
-<br />#eadgroup#, #CollNo#, #collname#, #creator#, #abstract#
+<br />#eadgroup#, #CollNo#, #collname#, #creator#, #abstract_txt#
 </cfoutput>
 
 <br /><br />No. collections: <cfoutput>#listCollections.recordCount#</cfoutput>

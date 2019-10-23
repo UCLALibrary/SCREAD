@@ -65,7 +65,7 @@ where collid=#form.collid#
 <cfset m_encoder=srch.encoder>
 <cfset m_filename=srch.filename>
 <cfset m_processdate=srch.processdate>
-<cfset m_abstract=srch.abstract>
+<cfset m_abstract=srch.abstract_txt>
 <cfset m_series=srch.series>
 <cfset m_no_boxes=srch.no_boxes>
 <cfset m_detail=srch.detail>
@@ -254,7 +254,7 @@ x=x&"</ead>" ;
 <cflocation url="text.xml">
 </cfif>
 
-<cfelse> --->  
+<cfelse> --->
 
 <!--- OAC XML & SGML --->
 
@@ -262,7 +262,7 @@ x=x&"</ead>" ;
 
 <!---
 
-<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="write" addnewline="yes" output=""> 
+<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="write" addnewline="yes" output="">
 <cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="<?xml version=""1.0""?>">
 <cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="<!DOCTYPE ead PUBLIC ""-//Society of American Archivists//DTD ead.dtd (Encoded Archival Description (EAD) Version 1.0)//EN"" ""ead.dtd"">">
 <cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="<!NOTATION GIF PUBLIC ""+//ISBN 0-7923-9432-1::Graphic Notation//NOTATION CompuServe Graphic Interchange Format//EN"" """">">
@@ -590,9 +590,9 @@ c03open = "no" ;
 	<cfset m_descNotes=replaceNoCase(replent(form.codetype,clist.descNotes),"","<lb>","all")>
 </cfif>
 <cfscript>
-if (clist.series eq "xNONEx") 
+if (clist.series eq "xNONEx")
 	ns = 0 ;
-else 
+else
 {
 	if (clist.seriesid neq stest)
 	{
@@ -633,7 +633,7 @@ else
 		c01open = "yes" ;
 		stest = clist.seriesid ;
 	}
-	if (clist.subseries eq "xNONEx") 
+	if (clist.subseries eq "xNONEx")
 		ns =  1;
 	else
 	{
@@ -667,11 +667,11 @@ else
 
 			c02open = "yes" ;
 			sstest = clist.subseriesid ;
-			ns = 2 ; 
+			ns = 2 ;
 		}
-	} 
+	}
 }
-if (clist.filetitle neq "*OMIT*") 
+if (clist.filetitle neq "*OMIT*")
 {
 	switch(ns)
 	{
@@ -700,14 +700,14 @@ if (clist.filetitle neq "*OMIT*")
 	if (((clist.folder_n neq 0 and clist.folder_n neq "") or clist.folder_a neq "") and clist.hideItemNos neq 1) {
 		<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="<container type=&quot;folder&quot; label=&quot;" & clist.folderLabel & " &quot;>") ;
 		WriteOutput(clist.folder_n & clist.folder_a) ;
-		<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="</container>") ; 
-	}	
+		<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="</container>") ;
+	}
 	if (m_detail is 0) {
 		<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="<unittitle>") ;
 		WriteOutput(replent(form.codetype,clist.filetitle)) ;
 		if (clist.dates neq "")
 		<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="<unitdate>" & replent(form.codetype,clist.dates) & "</unitdate>") ;
-		<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="</unittitle>") ; 
+		<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="</unittitle>") ;
 	}
 	else {
 		<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="<unittitle label=&quot;Title: &quot;>") ;
@@ -729,30 +729,30 @@ if (clist.filetitle neq "*OMIT*")
 	<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="<note><p>" & m_descNotes & "</p></note>") ;
 	if (clist.plate_no neq "")
 	<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="<odd><p>Plate no.: " & clist.plate_no & "</p></odd>") ;
-	if (variables.dao eq 1 and trim(clist.DAO_href) neq "" and trim(clist.DAO_caption) neq "") 
+	if (variables.dao eq 1 and trim(clist.DAO_href) neq "" and trim(clist.DAO_caption) neq "")
 	{
 		<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="<daogrp>") ;
 		<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="<daodesc><p>" & clist.DAO_caption & "</p></daodesc>") ;
 		if (form.codetype is "xml")
 			<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="<daoloc entityref=&quot;" & trim(clist.DAO_ent_nail) & "&quot; role=&quot;thumbnail&quot;/>") ;
-		else 
+		else
 		{
 			<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="<daoloc entityref=&quot;" & trim(clist.DAO_ent_nail) & "&quot; role=&quot;thumbnail&quot;>") ;
-			<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="</daoloc>") ; 
+			<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="</daoloc>") ;
 		}
 		if (form.codetype is "xml")
 		<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="<daoloc entityref=&quot;" & trim(clist.DAO_ent_med) & "&quot; role=&quot;med-res&quot;/>") ;
-		else 
+		else
 		{
 			<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="<daoloc entityref=&quot;" & trim(clist.DAO_ent_med) & "&quot; role=&quot;med-res&quot;>") ;
-			<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="</daoloc>") ; 
+			<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="</daoloc>") ;
 		}
 		if (form.codetype is "xml")
 		<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="<daoloc entityref=&quot;" & trim(clist.DAO_entity) & "&quot; role=&quot;hi-res&quot;/>") ;
-		else 
+		else
 		{
 			<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="<daoloc entityref=&quot;" & trim(clist.DAO_entity) & "&quot; role=&quot;hi-res&quot;>") ;
-			<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="</daoloc>") ; 
+			<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="</daoloc>") ;
 		}
 		<cffile file="e:\data_test\dlibdb_test\mailfile.xml" action="append" addnewline="yes" output="</daogrp>") ;
 	}
@@ -815,7 +815,7 @@ if (clist.recordcount neq 0)
 	from="#session.email#"
 	subject="Finding aid in XML format attached."
 	MIMEattach="e:\data_test\dlibdb_test\mailfile.xml">Finding aid in XML format attached.</cfmail>
-	
+
 <p>MAILED!</p>
 
 --->
@@ -837,7 +837,7 @@ if (session.OrigVer1 neq "")
 WriteOutput("&lt;!ENTITY " & session.OrigVer1 & " PUBLIC &quot;-//University of California, Los Angeles::" & session.OrigVer2 & "//TEXT (altformavail: original version of this online f.a. avail at spec coll)//EN&quot; &quot;" & session.OrigVer3 & "&quot;&gt;<br>") ;
 if (session.OrigVerName1 neq "")
 WriteOutput("&lt;!ENTITY " & session.OrigVerName1 & " PUBLIC &quot;-//University of California, Los Angeles::" & session.OrigVerName2 & "//TEXT (altformavail: name and address)//EN&quot; &quot;" & session.OrigVerName3 & "&quot;&gt;<br>") ;
-for (i=1; i lte no_ents; i=i+1) { 
+for (i=1; i lte no_ents; i=i+1) {
 WriteOutput("&lt;!ENTITY "&entityDecs[i][2]&" SYSTEM &quot;"&trim(entityDecs[i][1])&trim(entityDecs[i][3])&"&quot; NDATA JPEG&gt;<br>") ;
 WriteOutput("&lt;!ENTITY "&entityDecs[i][4]&" SYSTEM &quot;"&trim(entityDecs[i][1])&trim(entityDecs[i][5])&"&quot; NDATA JPEG&gt;<br>") ;
 WriteOutput("&lt;!ENTITY "&entityDecs[i][6]&" SYSTEM &quot;"&trim(entityDecs[i][1])&trim(entityDecs[i][7])&"&quot; NDATA JPEG&gt;<br>") ;
@@ -1128,9 +1128,9 @@ c03open = "no" ;
 	<cfset m_descNotes=replaceNoCase(replent(form.codetype,clist.descNotes),"<br>","&lt;lb&gt;<br>","all")>
 </cfif>
 <cfscript>
-if (clist.series eq "xNONEx") 
+if (clist.series eq "xNONEx")
 	ns = 0 ;
-else 
+else
 {
 	if (clist.seriesid neq stest)
 	{
@@ -1171,7 +1171,7 @@ else
 		c01open = "yes" ;
 		stest = clist.seriesid ;
 	}
-	if (clist.subseries eq "xNONEx") 
+	if (clist.subseries eq "xNONEx")
 		ns =  1;
 	else
 	{
@@ -1205,11 +1205,11 @@ else
 
 			c02open = "yes" ;
 			sstest = clist.subseriesid ;
-			ns = 2 ; 
+			ns = 2 ;
 		}
-	} 
+	}
 }
-if (clist.filetitle neq "*OMIT*") 
+if (clist.filetitle neq "*OMIT*")
 {
 	switch(ns)
 	{
@@ -1238,14 +1238,14 @@ if (clist.filetitle neq "*OMIT*")
 	if (((clist.folder_n neq 0 and clist.folder_n neq "") or clist.folder_a neq "") and clist.hideItemNos neq 1) {
 		WriteOutput("&lt;container type=&quot;folder&quot; label=&quot;" & clist.folderLabel & " &quot;&gt;") ;
 		WriteOutput(clist.folder_n & clist.folder_a) ;
-		WriteOutput("&lt;/container&gt;<br>") ; 
-	}	
+		WriteOutput("&lt;/container&gt;<br>") ;
+	}
 	if (m_detail is 0) {
 		WriteOutput("&lt;unittitle&gt;") ;
 		WriteOutput(replent(form.codetype,clist.filetitle)) ;
 		if (clist.dates neq "")
 		WriteOutput("&lt;unitdate&gt;" & replent(form.codetype,clist.dates) & "&lt;/unitdate&gt;") ;
-		WriteOutput("&lt;/unittitle&gt;<br>") ; 
+		WriteOutput("&lt;/unittitle&gt;<br>") ;
 	}
 	else {
 		WriteOutput("&lt;unittitle label=&quot;Title: &quot;&gt;") ;
@@ -1267,30 +1267,30 @@ if (clist.filetitle neq "*OMIT*")
 	WriteOutput("&lt;note&gt;&lt;p&gt;" & m_descNotes & "&lt;/p&gt;&lt;/note&gt;<br>") ;
 	if (clist.plate_no neq "")
 	WriteOutput("&lt;odd&gt;&lt;p&gt;Plate no.: " & clist.plate_no & "&lt;/p&gt;&lt;/odd&gt;<br>") ;
-	if (variables.dao eq 1 and trim(clist.DAO_href) neq "" and trim(clist.DAO_caption) neq "") 
+	if (variables.dao eq 1 and trim(clist.DAO_href) neq "" and trim(clist.DAO_caption) neq "")
 	{
 		WriteOutput("&lt;daogrp&gt;<br>") ;
 		WriteOutput("&lt;daodesc&gt;&lt;p&gt;" & clist.DAO_caption & "&lt;/p&gt;&lt;/daodesc&gt;") ;
 		if (form.codetype is "xml")
 			WriteOutput("&lt;daoloc entityref=&quot;" & trim(clist.DAO_ent_nail) & "&quot; role=&quot;thumbnail&quot;/&gt;<br>") ;
-		else 
+		else
 		{
 			WriteOutput("&lt;daoloc entityref=&quot;" & trim(clist.DAO_ent_nail) & "&quot; role=&quot;thumbnail&quot;&gt;<br>") ;
-			WriteOutput("&lt;/daoloc&gt;<br>") ; 
+			WriteOutput("&lt;/daoloc&gt;<br>") ;
 		}
 		if (form.codetype is "xml")
 		WriteOutput("&lt;daoloc entityref=&quot;" & trim(clist.DAO_ent_med) & "&quot; role=&quot;med-res&quot;/&gt;<br>") ;
-		else 
+		else
 		{
 			WriteOutput("&lt;daoloc entityref=&quot;" & trim(clist.DAO_ent_med) & "&quot; role=&quot;med-res&quot;&gt;<br>") ;
-			WriteOutput("&lt;/daoloc&gt;<br>") ; 
+			WriteOutput("&lt;/daoloc&gt;<br>") ;
 		}
 		if (form.codetype is "xml")
 		WriteOutput("&lt;daoloc entityref=&quot;" & trim(clist.DAO_entity) & "&quot; role=&quot;hi-res&quot;/&gt;<br>") ;
-		else 
+		else
 		{
 			WriteOutput("&lt;daoloc entityref=&quot;" & trim(clist.DAO_entity) & "&quot; role=&quot;hi-res&quot;&gt;<br>") ;
-			WriteOutput("&lt;/daoloc&gt;<br>") ; 
+			WriteOutput("&lt;/daoloc&gt;<br>") ;
 		}
 		WriteOutput("&lt;/daogrp&gt;<br>") ;
 	}

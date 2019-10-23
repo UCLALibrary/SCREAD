@@ -55,7 +55,7 @@ where collid=#url.id#
 <tr valign="top"><th align="right">Collection dates <font size="-2"><strong>&lt;245$f&gt;</strong></font>:</th><td>#colldates# (<strong>ISO:</strong> <cfif collDatesISO is "">-<cfelse>#collDatesISO#</cfif>)</td></tr>
 <tr valign="top"><th align="right">Creator <font size="-2"><strong>&lt;1xx&gt;</strong></font>:</th><td>#creator#
 <cfif creatorDates neq "">#creatorDates#</cfif></td></tr>
-<tr valign="top"><th align="right">Abstract:</th><td>#abstract#</td></tr>
+<tr valign="top"><th align="right">Abstract:</th><td>#abstract_txt#</td></tr>
 <tr valign="top"><th align="right">Extent <font size="-2"><strong>&lt;300&gt;</strong></font>:</th><td>#extent# #extent2# #extent3# #extent4# #extent5# #extentDAO#</td></tr>
 <tr valign="top"><th align="right">Language of materials:</th><td>
 <cfif langMat1 neq "">#langMat1# (<cfif langMatCode1 is "">-<cfelse>#langMatCode1#</cfif>)</cfif>

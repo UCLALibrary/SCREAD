@@ -50,7 +50,7 @@ where collid=#form.collid#
 </cfif>
 <cfset m_processdate=srch.processdate>
 <cfset m_processDateISO=srch.processDateISO>
-<cfset m_abstract=srch.abstract>
+<cfset m_abstract=srch.abstract_txt>
 <cfset m_series=srch.series>
 <cfset m_no_boxes=srch.no_boxes>
 <!--- Detail option removed 5/9/05 --->
@@ -84,7 +84,7 @@ where collid=#form.collid#
 order by scopeContentID
 </cfquery>
 <cfquery name="sr" datasource="#session.dsn#">
-select * from tblSeries 
+select * from tblSeries
 where collID=#form.collid# and series != 'xNONEx'
 order by seriesNo
 </cfquery>
@@ -107,7 +107,7 @@ where collid=#form.collid# and type='occupation'
 order by type,subject
 </cfquery>
 </cfif>
-<!--- 
+<!---
 <cfif isdefined("form.rela")>
 <cfquery name="rel" datasource="#session.dsn#">
 select * from tblRelatedMaterial
@@ -202,7 +202,7 @@ select p_subseriesID from tblSubseries where collID=#m_collid# and lvl=2 group b
 
 <cfif isdefined("form.cont")>
 <cfquery name="clist" datasource="#session.dsn#">
-select 
+select
 	<!--- tblCollectionID.collID,
 	tblCollectionID.CollNo,
 	tblCollectionID.collNumeric,

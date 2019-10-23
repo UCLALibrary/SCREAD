@@ -25,7 +25,7 @@ where collid=#form.collid#
 <cfset m_encoder=srch.encoder>
 <cfset m_filename=srch.filename>
 <cfset m_processdate=srch.processdate>
-<cfset m_abstract=srch.abstract>
+<cfset m_abstract=srch.abstract_txt>
 <cfset m_series=srch.series>
 <cfset m_no_boxes=srch.no_boxes>
 <cfset m_detail=srch.detail>
@@ -400,9 +400,9 @@ c03open = "no" ;
 <cfset m_description=replaceNoCase(clist.description,"<br>","&lt;lb&gt;<br>","all")>
 <cfset m_descNotes=replaceNoCase(clist.descNotes,"<br>","&lt;lb&gt;<br>","all")>
 <cfscript>
-if (clist.series eq "xNONEx") 
+if (clist.series eq "xNONEx")
 	ns = 0 ;
-else 
+else
 {
 	if (clist.seriesid neq stest)
 	{
@@ -443,7 +443,7 @@ else
 		c01open = "yes" ;
 		stest = clist.seriesid ;
 	}
-	if (clist.subseries eq "xNONEx") 
+	if (clist.subseries eq "xNONEx")
 		ns =  1;
 	else
 	{
@@ -476,11 +476,11 @@ else
 
 			c02open = "yes" ;
 			sstest = clist.subseriesid ;
-			ns = 2 ; 
+			ns = 2 ;
 		}
-	} 
+	}
 }
-if (clist.filetitle neq "*OMIT*") 
+if (clist.filetitle neq "*OMIT*")
 {
 	switch(ns)
 	{
@@ -508,18 +508,18 @@ if (clist.filetitle neq "*OMIT*")
 		if ((clist.folder_n neq 0 or clist.folder_a neq "") and clist.hideItemNos is not 1) {
 			x = x & "&lt;container type=&quot;folder&quot; label=&quot;" & clist.folderLabel & " &quot;&gt;" ;
 			x = x & clist.folder_n & clist.folder_a ;
-			x = x & "&lt;/container&gt;<br>" ; 
+			x = x & "&lt;/container&gt;<br>" ;
 		}
-	}	
-	if (m_detail is 0) 
+	}
+	if (m_detail is 0)
 		{
 		x = x & "&lt;unittitle&gt;" ;
 		x = x & clist.filetitle ;
 		if (clist.dates neq "")
 		x = x & "&lt;unitdate&gt;" & clist.dates & "&lt;/unitdate&gt;" ;
-		x = x & "&lt;/unittitle&gt;<br>" ; 
+		x = x & "&lt;/unittitle&gt;<br>" ;
 		}
-	else 
+	else
 		{
 		x = x & "&lt;unittitle label=&quot;Title: &quot;&gt;" ;
 		x = x & clist.filetitle ;

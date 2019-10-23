@@ -111,7 +111,7 @@
 	<!--- <cfset m_encoder=srch.encoder> --->
 	<cfset m_filename=srch.filename>
 	<cfset m_processdate=srch.processdate>
-	<cfset m_abstract=srch.abstract>
+	<cfset m_abstract=srch.abstract_txt>
 	<cfset m_t="edit">
 	<cfset m_series=srch.series>
 	<cfif srch.folderLabel is "">
@@ -201,11 +201,11 @@
 </cfif>
 <tr>
 	<th align="right">Collection ID <font size="-2"><strong>&lt;524&gt;</strong></font> [<font color="FF0000">R</font>]:</th>
-	<td colspan="3"><font size="-2"><strong>numbers only&gt;</strong></font><cfinput type="text" 
-		name="collNumeric" 
-		validate="integer" 
-		value="#m_collNumeric#" 
-		size="6" 
+	<td colspan="3"><font size="-2"><strong>numbers only&gt;</strong></font><cfinput type="text"
+		name="collNumeric"
+		validate="integer"
+		value="#m_collNumeric#"
+		size="6"
 		maxlength="6"
 		message="The first input box for Collection ID must be a number. To start an ID with an letter leave the first box blank."
 		class="general"><input type="text" name="collAlpha" value="#m_collAlpha#" size="15" maxlength="30" class="general"><font size="-2"><strong>&lt;any characters</strong></font></td>
@@ -283,7 +283,7 @@
 <tr valign="top"><th colspan="2">&nbsp;</th></tr>
 <tr>
 	<th align="right">Series structure:</th>
-	<td>No series/subseries: <input type="radio" name="series" value="0" <cfif m_series is 0>checked</cfif>>&nbsp;&nbsp; 
+	<td>No series/subseries: <input type="radio" name="series" value="0" <cfif m_series is 0>checked</cfif>>&nbsp;&nbsp;
 	Series only: <input type="radio" name="series" value="1" <cfif m_series is 1>checked</cfif>>&nbsp;&nbsp;
 	Series &amp; subseries: <input type="radio" name="series" value="2" <cfif m_series is 2>checked</cfif>></td>
 </tr>
