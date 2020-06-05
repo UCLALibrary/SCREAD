@@ -48,7 +48,7 @@
 				<!--- Encoder='#form.encoder#', --->
 				Filename='#form.filename#',
 				ProcessDate='#form.processdate#',
-				Abstract='#form.abstract#',
+				Abstract_txt='#form.abstract#',
 				Series=#m_series#,
 				FolderLabel='#form.folderLabel#',
 				ItemOrder=#form.itemOrder#,
@@ -166,7 +166,7 @@
 				<!--- Encoder, --->
 				Filename,
 				ProcessDate,
-				Abstract,
+				Abstract_txt,
 				Series,
 				FolderLabel,
 				ItemOrder,
